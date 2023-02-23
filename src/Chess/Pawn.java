@@ -2,15 +2,17 @@ package Chess;
 
 public class Pawn implements ChessPiece{
 	
+
+	private final PieceName pieceName;
 	private final Color color;
-	private final PieceName name;
 	private  boolean isDead;
+
 	
 
-	public Pawn(Color color, PieceName name, boolean isDead) {
+	public Pawn(PieceName pieceName, Color color, boolean isDead) {
 		super();
+		this.pieceName = pieceName;
 		this.color = color;
-		this.name = name;
 		this.isDead = isDead;
 	}
 
@@ -22,20 +24,20 @@ public class Pawn implements ChessPiece{
 	//@Override
 	public boolean isDead() {
 		// TODO Auto-generated method stub
-		return isDead;
+		return this.isDead;
 	}
  
 	//@Override
 	public void setDead(boolean isDead) {
 		// TODO Auto-generated method stub
-		  isDead = isDead;
+		  this.isDead = isDead;
 		
 	}
 
 	//@Override
 	public PieceName getName() {
 		// TODO Auto-generated method stub
-		return this.name;
+		return this.pieceName;
 	}
 
 }

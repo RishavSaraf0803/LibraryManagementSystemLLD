@@ -41,6 +41,7 @@ public class ChessBoard implements Board {
 					 System.out.print(chessPiece.get().getName() + " ");
 				 } 
 			}
+			System.out.println(); 
 		}
 		  
 	}
@@ -58,6 +59,11 @@ public class ChessBoard implements Board {
 	
 	public ChessCell getCell(Pair pair) {
 		return new ChessCell(pair.getX(), pair.getY());
+	}
+	public void putPiece(ChessPiece chessPiece, int row, int col) {
+		ChessCell chessCell = new ChessCell(row, col);
+		chessCell.setChessPiece(chessPiece);
+		this.cells.get(row).add(col, chessCell);
 	}
 	
 

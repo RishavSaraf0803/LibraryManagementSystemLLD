@@ -2,6 +2,19 @@ package Chess;
 
 public class Knight implements ChessPiece {
 
+	private final PieceName pieceName;
+	private final Color color;
+	private  boolean isDead;
+
+	
+
+	public Knight(PieceName pieceName, Color color, boolean isDead) {
+		super();
+		this.pieceName = pieceName;
+		this.color = color;
+		this.isDead = isDead;
+	}
+
 	@Override
 	public void move(ChessCell source, ChessCell destination, ChessBoard chessBoard) {
 		// TODO Auto-generated method stub
@@ -11,19 +24,19 @@ public class Knight implements ChessPiece {
 	@Override
 	public boolean isDead() {
 		// TODO Auto-generated method stub
-		return false;
+		return this.isDead;
 	}
 
 	@Override
 	public void setDead(boolean isDead) {
 		// TODO Auto-generated method stub
-		
+		this.isDead = isDead;
 	}
 
 	@Override
 	public PieceName getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.pieceName;
 	}
 
 }
