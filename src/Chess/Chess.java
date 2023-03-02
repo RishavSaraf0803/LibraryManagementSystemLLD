@@ -15,7 +15,9 @@ public class Chess extends BoardGame {
 		this.player1 = player1;
 		this.player2 = player2;
 		this.chessBoard = chessBoard;
-		prepareBoard(player1, player2,chessBoard);
+		//chessBoard.prepareBoard(player1, player2,chessBoard);
+		this.prepareBoard(player1, player2, this.chessBoard);
+		//chessBoard.display();
 	}
 
 	private void prepareBoard(ChessPlayer player1, ChessPlayer player2, ChessBoard chessBoard) {

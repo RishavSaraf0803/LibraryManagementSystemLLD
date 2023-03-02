@@ -24,10 +24,11 @@ public class ChessBoard implements Board {
 			}
 			this.cells.add(chessCells);
 		}
+		//this.display();
 	}
 
 	@Override
-	public void dipaly() {
+	public void display() {
 		// TODO Auto-generated method stub
 		
 		for(int row = 0; row < rowCount; row++) {
@@ -61,9 +62,12 @@ public class ChessBoard implements Board {
 		return new ChessCell(pair.getX(), pair.getY());
 	}
 	public void putPiece(ChessPiece chessPiece, int row, int col) {
-		ChessCell chessCell = new ChessCell(row, col);
-		chessCell.setChessPiece(chessPiece);
+		 ChessCell chessCell = new ChessCell(row, col);
+		chessCell.setChessPiece(Optional.of(chessPiece));
 		this.cells.get(row).add(col, chessCell);
+	}
+	public void removePiece(int row, int col) {
+		cells.get(row).get(col).setChessPiece(Optional.empty());
 	}
 	
 

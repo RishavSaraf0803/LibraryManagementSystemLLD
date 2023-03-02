@@ -17,8 +17,8 @@ public class ChessCell {
 	public Optional<ChessPiece> getChessPiece() {
 		return chessPiece;
 	}
-	public void setChessPiece(ChessPiece chessPiece) {
-		this.chessPiece = Optional.of(chessPiece);
+	public void setChessPiece(Optional<ChessPiece> chessPiece) {
+		this.chessPiece = Optional.ofNullable(chessPiece.get());
 	}
 	public int getX() {
 		return x;

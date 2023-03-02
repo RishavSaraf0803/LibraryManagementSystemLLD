@@ -2,7 +2,7 @@ package Chess;
 
 public interface Board {
 
-	void dipaly();
+	void display();
 	
 	void applyMove(Move move);
 }

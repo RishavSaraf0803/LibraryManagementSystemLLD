@@ -12,7 +12,7 @@ public class HumanChessPlayer extends ChessPlayer {
 	}
 
 	public Move makeMove() {
-		getChessBoard().dipaly();
+		getChessBoard().display();
 		int x, y;
 		Scanner sc = new Scanner(System.in);
 		x = sc.nextInt();

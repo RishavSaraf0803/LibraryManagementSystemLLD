@@ -43,5 +43,10 @@ public class Bishop implements ChessPiece{
 		return this.pieceName;
 	}
 
+	public Color getColor() {
+		return color;
+	}
+	
+
 	
 }

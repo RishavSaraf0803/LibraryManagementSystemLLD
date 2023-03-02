@@ -40,5 +40,9 @@ public class Rook implements ChessPiece {
 		return this.getName();
 	}
 
+	public Color getColor() {
+		return color;
+	}
+
 	
 }
