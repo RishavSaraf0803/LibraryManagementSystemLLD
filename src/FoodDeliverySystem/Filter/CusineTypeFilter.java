@@ -29,11 +29,11 @@ public class CusineTypeFilter implements FoodItemFilter,RestaurantFilter {
 		// TODO Auto-generated method stub
 		List<CuisineType> restaurantCuisineTypes = restaurant.getCuisineType();
 		for(CuisineType restaurantCuisineType : restaurantCuisineTypes) {
-			if(!cuisineType.contains(restaurantCuisineType)) {
-				return false;
+			if(cuisineType.contains(restaurantCuisineType)) {
+				return true;
 			}
 		}
-		return true;
+		return false ;
 	}
 
 

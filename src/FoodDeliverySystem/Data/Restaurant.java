@@ -12,6 +12,7 @@ public class Restaurant {
 	private final List<CuisineType> cuisineType;
 	private final StarRating starRating;
 	private final Menu menu;
+	private final Address address;
 	public Restaurant(int restaurantId, String restaurantName, String restaurantDescription,
 			BusinessHours businessHours, MealType mealType, List<CuisineType> cuisineType, StarRating starRating,
 			Menu menu) {
@@ -24,6 +25,7 @@ public class Restaurant {
 		this.cuisineType = cuisineType;
 		this.starRating = starRating;
 		this.menu = menu;
+		this.address = null;
 	}
 	public int getRestaurantId() {
 		return restaurantId;
@@ -48,6 +50,9 @@ public class Restaurant {
 	}
 	public Menu getMenu() {
 		return menu;
+	}
+	public Address getAddress() {
+		return address;
 	}
 	
 	

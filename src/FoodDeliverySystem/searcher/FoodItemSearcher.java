@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import FoodDeliverySystem.Data.*;
+import FoodDeliverySystem.DataAccessor.DataAccessObjectConverter;
+import FoodDeliverySystem.DataAccessor.DataAccessResult;
+import FoodDeliverySystem.DataAccessor.DataAccessor;
 import FoodDeliverySystem.Filter.FoodItemFilter;
 public class FoodItemSearcher {
 
@@ -12,7 +15,7 @@ public class FoodItemSearcher {
 			throw new IllegalArgumentException("Missing Params");
 		}
 		
-		DataAccessResult dataAccessReasult = DataAccessor.getFoodItemWithName(foodItemName);
+		DataAccessResult dataAccessResult = DataAccessor.getFoodItemWithName(foodItemName);
 		
 		List<FoodItem> foodItems = DataAccessObjectConverter.convertToFoodItems(dataAccessResult);
 		
@@ -34,9 +37,9 @@ public class FoodItemSearcher {
 		
 	}
 	
-	public FoodItem searchById(int foodItemId) {
+	public FoodItem searchById(int foodItemId) throws Exception {
 		
-		DataAccessResult dataAccessReasult = DataAccessor.getFoodItemWithName(foodItemId);
+		DataAccessResult dataAccessResult = DataAccessor.getFoodItemWithId(foodItemId);
 		
 		List<FoodItem> foodItems = DataAccessObjectConverter.convertToFoodItems(dataAccessResult);
 		

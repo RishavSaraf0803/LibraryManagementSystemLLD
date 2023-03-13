@@ -7,7 +7,7 @@ import LibraryManagementSystem.user.Member;
 
 public class ResultConverter {
 
-	private ResultsConverter() {}
+	private void ResultsConverter() {}
 	 public static List<Member> convertToMembers(Results results){
 		 return null;
 	 }

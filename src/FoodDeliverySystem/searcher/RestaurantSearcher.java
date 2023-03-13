@@ -5,6 +5,9 @@ import java.util.List;
 
 import FoodDeliverySystem.Data.FoodItem;
 import FoodDeliverySystem.Data.Restaurant;
+import FoodDeliverySystem.DataAccessor.DataAccessObjectConverter;
+import FoodDeliverySystem.DataAccessor.DataAccessResult;
+import FoodDeliverySystem.DataAccessor.DataAccessor;
 import FoodDeliverySystem.Filter.FoodItemFilter;
 import FoodDeliverySystem.Filter.RestaurantFilter;
 
@@ -14,7 +17,7 @@ public class RestaurantSearcher {
 		if(restaurantName == null || restaurantName.length() == 0 || filters == null) {
 			throw new IllegalArgumentException("Invalid Params");
 		}
-		DataAccessResult dataAccessReasult = DataAccessor.getRestaurantWithName(restaurantName);
+		DataAccessResult dataAccessResult = DataAccessor.getRestaurantWithName(restaurantName);
 		
 		List<Restaurant> restaurants = DataAccessObjectConverter.convertToRestaurant(dataAccessResult);
 		
@@ -33,7 +36,7 @@ public class RestaurantSearcher {
 	}
 	
 	public Restaurant searchById(int restaurantId) {
-		DataAccessResult dataAccessReasult = DataAccessor.getRestaurantWithId(restaurantId);
+		DataAccessResult dataAccessResult = DataAccessor.getRestaurantWithId(restaurantId);
 		
 		List<Restaurant> restaurants = DataAccessObjectConverter.convertToRestaurant(dataAccessResult);
 		
